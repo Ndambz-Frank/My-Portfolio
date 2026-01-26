@@ -1,0 +1,340 @@
+/* Color Theme Based on Profile Photo */
+/* Golden color palette inspired by the warm golden tones in the profile photo */
+/* Colors are harmonized to complement the golden aesthetic while maintaining professionalism */
+
+:root {
+  /* Primary Colors - Rich golden/amber tones (matching photo's golden hue) */
+  --primary-color: #d4af37;
+  --primary-dark: #b8941f;
+  --primary-light: #e5c158;
+  --primary-lighter: #f0d675;
+  
+  /* Secondary Colors - Deep golden browns (complements golden tones) */
+  --secondary-color: #b8860b;
+  --secondary-dark: #8b6914;
+  --secondary-light: #daa520;
+  
+  /* Accent Colors - Warm amber and bronze (harmonizes with gold) */
+  --accent-color: #cd853f;
+  --accent-dark: #a0522d;
+  --accent-light: #deb887;
+  
+  /* Complementary Colors - Deep navy/teal (creates elegant contrast with gold) */
+  --complement-color: #1a4d6e;
+  --complement-dark: #0f2e42;
+  --complement-light: #2d6a9e;
+  
+  /* Neutral Colors - Warm grays (complements golden palette) */
+  --neutral-dark: #3d3d3d;
+  --neutral-medium: #6b6b6b;
+  --neutral-light: #f5f5dc;
+  --neutral-lighter: #fafaf0;
+  
+  /* Success/Info/Warning Colors - Harmonized with golden theme */
+  --success-color: #27ae60;
+  --info-color: #3498db;
+  --warning-color: #f39c12;
+  --danger-color: #e74c3c;
+  
+  /* Text Colors */
+  --text-primary: #2c2c2c;
+  --text-secondary: #5a5a5a;
+  --text-light: #ffffff;
+  --text-gold: #d4af37;
+  
+  /* Background Gradients - Golden theme gradients */
+  --gradient-primary: linear-gradient(135deg, #d4af37 0%, #e5c158 50%, #f0d675 100%);
+  --gradient-secondary: linear-gradient(135deg, #b8860b 0%, #daa520 100%);
+  --gradient-accent: linear-gradient(135deg, #cd853f 0%, #deb887 100%);
+  --gradient-cover: linear-gradient(135deg, rgba(180, 148, 31, 0.95) 0%, rgba(212, 175, 55, 0.95) 50%, rgba(229, 193, 88, 0.95) 100%);
+  --gradient-golden: linear-gradient(135deg, #b8860b 0%, #d4af37 50%, #e5c158 100%);
+}
+
+/* Override Bootstrap primary color - Golden theme */
+.bg-primary {
+  background: var(--gradient-primary) !important;
+  background-color: var(--primary-color) !important;
+}
+
+.btn-primary {
+  background: var(--gradient-primary) !important;
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-dark) !important;
+  color: var(--text-primary) !important;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background: var(--gradient-golden) !important;
+  background-color: var(--primary-dark) !important;
+  border-color: var(--secondary-color) !important;
+  color: var(--text-light) !important;
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+}
+
+.border-primary {
+  border-color: var(--primary-color) !important;
+}
+
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+/* Secondary color overrides - Golden browns */
+.bg-secondary {
+  background-color: var(--secondary-color) !important;
+}
+
+.btn-secondary {
+  background: var(--gradient-secondary) !important;
+  background-color: var(--secondary-color) !important;
+  border-color: var(--secondary-dark) !important;
+  color: var(--text-light) !important;
+}
+
+.btn-secondary:hover {
+  background-color: var(--secondary-dark) !important;
+  box-shadow: 0 6px 20px rgba(184, 134, 11, 0.5);
+}
+
+/* Success color overrides */
+.bg-success {
+  background-color: var(--success-color) !important;
+}
+
+.border-success {
+  border-color: var(--success-color) !important;
+}
+
+/* Info color overrides - Warm amber */
+.bg-info {
+  background: var(--gradient-accent) !important;
+  background-color: var(--accent-color) !important;
+}
+
+.border-info {
+  border-color: var(--accent-color) !important;
+}
+
+.badge.bg-info {
+  background: var(--gradient-accent) !important;
+  background-color: var(--accent-color) !important;
+}
+
+/* Warning color overrides - Enhanced golden warning */
+.bg-warning {
+  background: linear-gradient(135deg, #f39c12 0%, #f1c40f 100%) !important;
+  background-color: var(--warning-color) !important;
+}
+
+.border-warning {
+  border-color: var(--warning-color) !important;
+}
+
+.badge.bg-warning {
+  background: linear-gradient(135deg, #f39c12 0%, #f1c40f 100%) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Custom card styles with golden theme colors */
+.card-header.bg-primary {
+  background: var(--gradient-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+.card-header.bg-info {
+  background: var(--gradient-accent) !important;
+  color: var(--text-light) !important;
+}
+
+.card-header.bg-success {
+  background: linear-gradient(135deg, var(--success-color) 0%, #2ecc71 100%) !important;
+  color: var(--text-light) !important;
+}
+
+.card-header.bg-warning {
+  background: linear-gradient(135deg, #f39c12 0%, #f1c40f 100%) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Badge color overrides - Golden theme */
+.badge.bg-primary {
+  background: var(--gradient-primary) !important;
+  background-color: var(--primary-color) !important;
+  color: var(--text-primary) !important;
+  font-weight: 600;
+}
+
+.badge.bg-info {
+  background: var(--gradient-accent) !important;
+  background-color: var(--accent-color) !important;
+  color: var(--text-light) !important;
+}
+
+.badge.bg-success {
+  background: linear-gradient(135deg, var(--success-color) 0%, #2ecc71 100%) !important;
+  background-color: var(--success-color) !important;
+  color: var(--text-light) !important;
+}
+
+.badge.bg-warning {
+  background: linear-gradient(135deg, #f39c12 0%, #f1c40f 100%) !important;
+  background-color: var(--warning-color) !important;
+  color: var(--text-primary) !important;
+  font-weight: 600;
+}
+
+/* Profile photo frame styling - Golden elegant design */
+.profile-photo-frame {
+  border: 6px solid var(--primary-color);
+  box-shadow: 
+    0 15px 35px rgba(212, 175, 55, 0.5),
+    0 5px 15px rgba(184, 134, 11, 0.3),
+    inset 0 0 0 3px var(--secondary-color),
+    0 0 30px rgba(212, 175, 55, 0.3);
+  background: var(--gradient-primary);
+  padding: 6px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-photo-frame:hover {
+  transform: scale(1.02);
+  box-shadow: 
+    0 20px 40px rgba(212, 175, 55, 0.6),
+    0 8px 20px rgba(184, 134, 11, 0.4),
+    inset 0 0 0 3px var(--primary-lighter),
+    0 0 40px rgba(212, 175, 55, 0.4);
+}
+
+.profile-photo-frame::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  right: -12px;
+  bottom: -12px;
+  border: 3px solid var(--primary-color);
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: pulse 3s ease-in-out infinite;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+}
+
+.profile-photo-frame::after {
+  content: '';
+  position: absolute;
+  top: -18px;
+  left: -18px;
+  right: -18px;
+  bottom: -18px;
+  border: 2px solid var(--accent-color);
+  border-radius: 50%;
+  opacity: 0.4;
+  box-shadow: 0 0 15px rgba(205, 133, 63, 0.4);
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+/* Responsive photo styling */
+@media (max-width: 768px) {
+  .profile-photo-frame {
+    width: 220px !important;
+    height: 220px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .profile-photo-frame {
+    width: 180px !important;
+    height: 180px !important;
+  }
+}
+
+/* Enhanced section backgrounds with golden-inspired colors */
+section.bg-light {
+  background: linear-gradient(to bottom, var(--neutral-lighter) 0%, #ffffff 100%) !important;
+}
+
+section.bg-white {
+  background: #ffffff !important;
+}
+
+/* Golden text accents */
+.text-gold {
+  color: var(--primary-color) !important;
+}
+
+.text-golden {
+  color: var(--secondary-color) !important;
+}
+
+/* Footer polish */
+footer .link-light:hover {
+  color: var(--primary-light) !important;
+}
+
+/* Card enhancements with golden theme colors */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2) !important;
+}
+
+/* Button enhancements - Golden theme */
+.btn-primary {
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
+  transform: translateY(-2px);
+}
+
+.btn-light {
+  transition: all 0.3s ease;
+}
+
+.btn-light:hover {
+  background: var(--gradient-primary) !important;
+  color: var(--text-primary) !important;
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Badge enhancements */
+.badge {
+  transition: transform 0.2s ease;
+}
+
+.badge:hover {
+  transform: scale(1.05);
+}
+
+/* Custom Font Styling for Name */
+.name-font {
+  font-family: 'Playfair Display', serif !important;
+  font-weight: 700 !important;
+  letter-spacing: 2px !important;
+  text-transform: uppercase !important;
+}
+
+.name-font-cover {
+  font-family: 'Playfair Display', serif !important;
+  font-weight: 700 !important;
+  letter-spacing: 1px !important;
+}
+
