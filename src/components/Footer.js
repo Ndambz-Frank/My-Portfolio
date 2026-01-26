@@ -62,6 +62,16 @@ const Footer = () => {
                   GitHub
                 </a>
               </li>
+              <li className="mb-2">
+                <a
+                  className="link-light link-underline-opacity-0 link-underline-opacity-100-hover"
+                  href="https://my-portfolio-5qdu0tooh-francis-ndambukis-projects.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Portfolio
+                </a>
+              </li>
             </ul>
           </div>
 

@@ -52,6 +52,10 @@ const Cover = () => {
             <i className="me-2">🔗</i>
             GitHub
           </a>
+          <a href="https://my-portfolio-5qdu0tooh-francis-ndambukis-projects.vercel.app" target="_blank" rel="noopener noreferrer" className="btn btn-light btn-lg rounded-pill px-4 py-2">
+            <i className="me-2">🌐</i>
+            Portfolio
+          </a>
         </div>
       </div>
     </section>
