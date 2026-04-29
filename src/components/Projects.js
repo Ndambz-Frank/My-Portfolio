@@ -6,48 +6,44 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'INFINITY-INSURANCE',
+      title: 'INFINITY INSURANCE SYSTEM',
       problem: 'The insurance industry needed a solution to cut short the brokers in the insurance field, streamlining the process and making insurance more accessible directly to customers.',
       role: 'Full Stack Developer - Led the development of the entire platform, including frontend and backend development.',
       tools: 'React, Express, MongoDB, JavaScript, JWT Authentication, Vercel',
-      outcomes: '',
+      status: 'Deployed (Under Repair)',
+      outcomes: 'The system is deployed and currently under repair while improvements and maintenance are in progress.',
       github: 'https://github.com/Ndambz-Frank/INFINITY-INSURANCE'
     },
     {
       id: 2,
-      title: 'E-Commerce Platform',
+      title: 'Gikosh',
       problem: 'Small businesses needed an affordable, scalable e-commerce solution to compete with larger retailers and reach customers online.',
       role: 'Full Stack Developer - Led the development of the entire platform, including frontend, backend, and database design.',
       tools: 'React, Node.js, Express, MongoDB, Stripe API, AWS S3, JWT Authentication',
-      outcomes: 'Successfully launched platform serving 50+ businesses with 1000+ active users. Reduced checkout time by 40% and improved page load speed by 60%.',
+      status: 'Not Completed',
+      outcomes: 'Project is still in active development and has not yet been completed.',
       github: 'https://github.com/francisndambuki/ecommerce-platform'
     },
     {
       id: 3,
-      title: 'Task Management Application',
+      title: 'Grasuu Task Management API',
       problem: 'Teams were struggling with project coordination and task tracking, leading to missed deadlines and communication gaps.',
       role: 'Frontend Developer - Designed and implemented the user interface, state management, and real-time collaboration features.',
       tools: 'React, Redux, Socket.io, Material-UI, Chart.js, RESTful APIs',
-      outcomes: 'Improved team productivity by 35% and reduced project completion time by 25%. Received positive feedback from 200+ users.',
+      status: 'Complete',
+      outcomes: 'Project is complete and fully implemented.',
       github: 'https://github.com/francisndambuki/task-manager'
     },
     {
       id: 4,
-      title: 'Weather Forecast Dashboard',
+      title: 'FORECASTED',
       problem: 'Users needed a comprehensive, user-friendly weather application that provides detailed forecasts and weather alerts.',
       role: 'Full Stack Developer - Built the entire application including API integration, data visualization, and responsive design.',
       tools: 'React, Node.js, OpenWeatherMap API, D3.js, CSS3, Express.js',
-      outcomes: 'Created an intuitive dashboard with 5-day forecasts and real-time updates. Achieved 90% user satisfaction rate.',
+      status: 'Complete',
+      outcomes: 'Project is complete and deployed for public access.',
+      live: 'https://weather-forecasted-git-main-francis-ndambukis-projects.vercel.app',
       github: 'https://github.com/francisndambuki/weather-dashboard'
-    },
-    {
-      id: 5,
-      title: 'Social Media Analytics Tool',
-      problem: 'Marketing teams required insights into their social media performance but existing tools were expensive and complex.',
-      role: 'Backend Developer - Developed the API, data processing pipeline, and analytics engine.',
-      tools: 'Python, Django, PostgreSQL, Redis, Celery, Twitter API, Instagram API, Chart.js',
-      outcomes: 'Delivered analytics tool processing 10,000+ posts daily. Reduced reporting time from hours to minutes.',
-      github: 'https://github.com/francisndambuki/social-analytics'
     }
   ];
 
@@ -87,6 +83,11 @@ const Projects = () => {
                     </div>
                     
                     <div className="mb-4 pb-3 border-bottom">
+                      <h4 className="h6 fw-bold text-primary mb-2">Status</h4>
+                      <p className="mb-0">{project.status}</p>
+                    </div>
+
+                    <div className="mb-4 pb-3 border-bottom">
                       <h4 className="h6 fw-bold text-primary mb-2">Tools & Techniques Used</h4>
                       <p className="mb-0">{project.tools}</p>
                     </div>
@@ -98,8 +99,19 @@ const Projects = () => {
                       </div>
                     )}
                     
-                    <div>
-                      <h4 className="h6 fw-bold text-primary mb-2">GitHub Repository</h4>
+                    <div className="d-flex flex-wrap gap-2">
+                      {project.live && (
+                        <a
+                          href={project.live}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="btn btn-success"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          View Live Project →
+                        </a>
+                      )}
+
                       <a
                         href={project.github}
                         target="_blank"
